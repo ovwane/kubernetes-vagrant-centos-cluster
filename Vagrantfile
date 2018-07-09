@@ -74,8 +74,8 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-      vb.memory = "3072"
-      vb.cpus = 1
+      vb.memory = "4096"
+      vb.cpus = 8
       vb.name = "node#{i}"
     end
 
@@ -116,7 +116,7 @@ EOF
         cat /etc/hosts
 
         echo 'set nameserver'
-	echo "nameserver 8.8.8.8">/etc/resolv.conf
+	echo "nameserver 114.114.114.114">/etc/resolv.conf
 	cat /etc/resolv.conf
 
         echo 'disable swap'
